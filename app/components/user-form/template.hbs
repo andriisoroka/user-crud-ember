@@ -1,0 +1,19 @@
+<div class="form-group">
+	<label>Name</label>
+	{{input type="text" class="form-control" value=entity.name}}
+</div>
+<div class="form-group">
+	<label>Email</label>
+	{{input type="email" class="form-control" value=entity.email}}
+</div>
+<div class="form-group">
+	<label>Position</label>
+	{{input type="text" class="form-control" value=entity.position}}
+</div>
+<div class="form-group">
+	<label>Age</label>
+	{{input type="number" class="form-control" value=entity.age}}
+</div>
+{{#link-to 'users' class="btn btn-default"}}Cancel{{/link-to}}
+<button {{action 'send'}} class="btn btn-success">Save</button>
+{{yield}}
