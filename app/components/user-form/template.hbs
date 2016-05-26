@@ -1,3 +1,6 @@
+{{#if error}}
+	<div class="alert alert-danger" role="alert">{{error}}</div>
+{{/if}}	
 <div class="form-group">
 	<label>Name</label>
 	{{input type="text" class="form-control" value=entity.name}}

@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 	actions:{
 		transitionToRoute(){
-			this.transitionToRoute('users');
+			this.store.unloadAll('user');
+			this.transitionTo('users');
 		},
 		save(data){
 			let user = this.store.createRecord('user',{
